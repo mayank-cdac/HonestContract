@@ -1,0 +1,106 @@
+{
+  "fname": "Rajesh",
+  "lname": "Kumar",
+  "company_name": "Sony",
+  "company_title": "Sony",
+  "street": "44",
+  "unit": "24",
+  "street_name": "Sec 24",
+  "city": "Gurgaon",
+  "state": "Haryana",
+  "country": "India",
+  "pin": "110021",
+  "email": "rajesh@gmail.com",
+  "phone": "9898989898",
+  "fax": "011-234446"
+}
+
+
+
+{
+  "user":
+    {
+    "fname": "Rajesh",
+    "lname": "Kumar",
+    "company_name": "Sony",
+    "company_title": "Sony",
+    "street": "44",
+    "unit": "24",
+    "street_name": "Sec 24",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "country": "India",
+    "pin": "110021",
+    "email": "rajesh@gmail.com",
+    "phone": "9898989898",
+    "fax": "011-234446"
+  },
+  "refresh_token": "ABCABCABC" ,
+  "auth_token":"DEFDEFDEF"
+}
+
+{
+"user":{
+  "name"  :"rajeshkumar",
+  "email" :"rajesh@gmail.com"
+ }
+}
+
+curl -X POST \
+http://example.com/purpose/:id/message\
+-H 'accept: application/json' \
+-H 'cache-control: no-cache' \
+-H 'content-type: application/json' \
+-d '{
+{
+  "messgae":{
+  "description":"message";
+ }
+}
+
+
+
+
+
+
+
+
+
+
+{
+"renewal":{
+"contract_id":"",
+"type":"",
+"informed_period":"",
+"inform_days":"",
+"status":""
+ }
+}
+
+
+contract_id | integer | Id of the contract | true
+type        | json    | Renewal type of contract| true
+informed_period| integer| Renewal Informed period time | true
+inform_days |  integer | Renewal Inform days | true
+status     | tinyInteger | Status of the Renewal | true
+
+
+
+
+
+
+contract_id 	integer 	Id of the contract 	true
+purpose 	string 	Purpose description 	true
+units_to_be_sold 	integers 	Units of the purpose 	true
+purpose_image 	image 	Multiple Image of the purpose 	true
+description 	pdf 	Description of the purpose 	true
+agreement 	pdf 	Agreement of the purpose 	true
+status 	tinyInteger 	Status of the purpose 	true
+
+
+
+contract_id | integer | Id of the contract   | true
+terminated_by| enum   | Terminated by options|
+target_not_meet| enum | Target not meet option|
+inform_days | integer| Inform days of termination|
+status     | tinyInteger | Status of the termination | true
