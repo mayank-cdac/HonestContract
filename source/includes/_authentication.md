@@ -11,13 +11,12 @@ This API is used for the Signup with HonestContract application with some inform
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
 -d '{
-{
-	"user":{
-		"fname": "vikram",
-		"email":"vikmar@gmail.com",
-		"password":"abers56"
-		"password":"******"
-}
+    "user": {
+            "name": "Mayank pratap",
+            "email":"mayank1@gmail.com",
+            "password":"********",
+            "password_confirmation":"********"
+             }
 }'
 ```
 
@@ -26,24 +25,22 @@ This API is used for the Signup with HonestContract application with some inform
 ```json
 {
 	"user": {
-		"id": 57,
-		"fname": "vikram",
-		"lname": null,
-		"company_name": null,
-		"company_title": null,
-		"street": null,
-		"unit": null,
-		"street_name": null,
-		"city": null,
-		"state": null,
-		"country": null,
-		"pin": null,
-		"email": "vikamsharma@gmail.com",
-		"phone": null,
-		"fax": null,
-		"created_at": "2017-09-21 11:32:55",
-		"updated_at": "2017-09-21 11:32:55"
-	},
+    		"id": 4,
+    		"email": "mayank1@gmail.com",
+    		"name": "Mayank pratap",
+    		"company_name": null,
+    		"company_title": null,
+    		"street": null,
+    		"unit": null,
+    		"street_name": null,
+    		"city": null,
+    		"state": null,
+    		"country": null,
+    		"pin": null,
+    		"phone": null,
+    		"fax": null,
+    		"contracts": []
+    	},
 	"access_token": "ABCABCABC",
     "refresh_token": "DEFDEFDEF"
 }
@@ -68,10 +65,10 @@ This API is used for the Signup with HonestContract application with some inform
 
 Parameter | Type    | Description | Required
 --------- | ------- | ----------- | -----------
-fname     | string   | Name of the user | true
+name     | string   | Name of the user | true
 email     | string  | Email address of the user | true
 password  |  string | Password of the user | true
-
+password_confirmation  |  string | Password confirmation to the user | true
 
 <aside class="success">Status code :200 OK </aside>
 <aside class="warning">Error code : 422 Unprocessable Entity</aside>
@@ -89,8 +86,8 @@ http://baseurl/api/signin \
 -d '{
 {
 	"user":{
-		"email":"vikmar@gmail.com",
-		"password":"abers56"
+		"email":"mayank1@gmail.com",
+		"password":"********"
 	}
 }
 }
@@ -104,24 +101,22 @@ http://baseurl/api/signin \
 ```json
 {
 	"user": {
-		"id": 57,
-		"fname": "vikram",
-		"lname": null,
-		"company_name": null,
-		"company_title": null,
-		"street": null,
-		"unit": null,
-		"street_name": null,
-		"city": null,
-		"state": null,
-		"country": null,
-		"pin": null,
-		"email": "vikmar@gmail.com",
-		"phone": null,
-		"fax": null,
-		"created_at": "2017-09-21 11:32:55",
-		"updated_at": "2017-09-21 11:32:55"
-	},
+    		"id": 4,
+    		"email": "mayank1@gmail.com",
+    		"name": "Mayank pratap",
+    		"company_name": null,
+    		"company_title": null,
+    		"street": null,
+    		"unit": null,
+    		"street_name": null,
+    		"city": null,
+    		"state": null,
+    		"country": null,
+    		"pin": null,
+    		"phone": null,
+    		"fax": null,
+    		"contracts": []
+    	},
 	"access_token": "ABCABCABC",
     "refresh_token": "DEFDEFDEF"
 }
@@ -160,7 +155,7 @@ http://baseurl/api/signin \
 -H 'content-type: application/json' \
 -d '{
 "user" :{
-"facebook" :"true",
+"social" :"facebook",
 "token": "facebooktoken",
  }
 }'
@@ -172,24 +167,22 @@ http://baseurl/api/signin \
 ```json
 {
 	"user": {
-		"id": 57,
-		"fname": "vikram",
-		"lname": null,
-		"company_name": null,
-		"company_title": null,
-		"street": null,
-		"unit": null,
-		"street_name": null,
-		"city": null,
-		"state": null,
-		"country": null,
-		"pin": null,
-		"email": "vikamsharma@gmail.com",
-		"phone": null,
-		"fax": null,
-		"created_at": "2017-09-21 11:32:55",
-		"updated_at": "2017-09-21 11:32:55"
-	},
+    		"id": 4,
+    		"email": "mayank11@gmail.com",
+    		"name": "Mayank pratap",
+    		"company_name": null,
+    		"company_title": null,
+    		"street": null,
+    		"unit": null,
+    		"street_name": null,
+    		"city": null,
+    		"state": null,
+    		"country": null,
+    		"pin": null,
+    		"phone": null,
+    		"fax": null,
+    		"contracts": []
+    	},
 	"access_token": "ABCABCABC",
     "refresh_token": "DEFDEFDEF"
 }
@@ -227,7 +220,7 @@ http://baseurl/api/signin \
 -H 'content-type: application/json' \
 -d '{
 "user" :{
-"google" :"true",
+"social" :"google",
 "token": "googletoken",
  }
 }'
@@ -239,24 +232,22 @@ http://baseurl/api/signin \
 ```json
 {
 	"user": {
-		"id": 57,
-		"fname": "vikram",
-		"lname": null,
-		"company_name": null,
-		"company_title": null,
-		"street": null,
-		"unit": null,
-		"street_name": null,
-		"city": null,
-		"state": null,
-		"country": null,
-		"pin": null,
-		"email": "vikamsharma@gmail.com",
-		"phone": null,
-		"fax": null,
-		"created_at": "2017-09-21 11:32:55",
-		"updated_at": "2017-09-21 11:32:55"
-	},
+    		"id": 4,
+    		"email": "mayank11@gmail.com",
+    		"name": "Mayank pratap",
+    		"company_name": null,
+    		"company_title": null,
+    		"street": null,
+    		"unit": null,
+    		"street_name": null,
+    		"city": null,
+    		"state": null,
+    		"country": null,
+    		"pin": null,
+    		"phone": null,
+    		"fax": null,
+    		"contracts": []
+    	},
 	"access_token": "ABCABCABC",
     "refresh_token": "DEFDEFDEF"
 }
@@ -346,25 +337,6 @@ This API is used for retrieve access token.
 
 ```json
 {
-	"user": {
-		"id": 57,
-		"fname": "vikram",
-		"lname": null,
-		"company_name": null,
-		"company_title": null,
-		"street": null,
-		"unit": null,
-		"street_name": null,
-		"city": null,
-		"state": null,
-		"country": null,
-		"pin": null,
-		"email": "vikamsharma@gmail.com",
-		"phone": null,
-		"fax": null,
-		"created_at": "2017-09-21 11:32:55",
-		"updated_at": "2017-09-21 11:32:55"
-	},
 	"access_token": "ABCABCABC",
     "refresh_token": "DEFDEFDEF"
 }
